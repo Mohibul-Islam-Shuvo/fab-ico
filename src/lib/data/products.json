@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Classic T-Shirt",
+    "price": 25,
+    "description": "A classic t-shirt made from 100% cotton.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=T-Shirt"
+  },
+  {
+    "id": 2,
+    "name": "Slim Fit Jeans",
+    "price": 75,
+    "description": "Comfortable and stylish slim fit jeans.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Jeans"
+  },
+  {
+    "id": 3,
+    "name": "Hoodie",
+    "price": 50,
+    "description": "A warm and cozy hoodie for chilly days.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Hoodie"
+  },
+  {
+    "id": 4,
+    "name": "Sneakers",
+    "price": 100,
+    "description": "Stylish sneakers that go with any outfit.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Sneakers"
+  },
+  {
+    "id": 5,
+    "name": "Beanie",
+    "price": 20,
+    "description": "A stylish beanie to keep your head warm.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Beanie"
+  },
+  {
+    "id": 6,
+    "name": "Backpack",
+    "price": 60,
+    "description": "A durable backpack for all your needs.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Backpack"
+  },
+  {
+    "id": 7,
+    "name": "t-shirt",
+    "price": 10,
+    "description": "A durable t-shirt for all.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Backpack"
+  }
+]
