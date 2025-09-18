@@ -1,51 +1,75 @@
+
 [
   {
     "id": 1,
     "name": "Classic T-Shirt",
     "price": 25,
     "description": "A classic t-shirt made from 100% cotton.",
-    "image": "https://placehold.co/600x400/EEE/31343C?text=T-Shirt"
+    "image": "https://placehold.co/600x400/EEE/31343C?text=T-Shirt",
+    "category": "Tops"
   },
   {
     "id": 2,
     "name": "Slim Fit Jeans",
     "price": 75,
     "description": "Comfortable and stylish slim fit jeans.",
-    "image": "https://placehold.co/600x400/EEE/31343C?text=Jeans"
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Jeans",
+    "category": "Bottoms"
   },
   {
     "id": 3,
-    "name": "Hoodie",
+    "name": "Cozy Hoodie",
     "price": 50,
     "description": "A warm and cozy hoodie for chilly days.",
-    "image": "https://placehold.co/600x400/EEE/31343C?text=Hoodie"
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Hoodie",
+    "category": "Tops"
   },
   {
     "id": 4,
-    "name": "Sneakers",
+    "name": "Urban Sneakers",
     "price": 100,
     "description": "Stylish sneakers that go with any outfit.",
-    "image": "https://placehold.co/600x400/EEE/31343C?text=Sneakers"
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Sneakers",
+    "category": "Footwear"
   },
   {
     "id": 5,
-    "name": "Beanie",
+    "name": "Knit Beanie",
     "price": 20,
     "description": "A stylish beanie to keep your head warm.",
-    "image": "https://placehold.co/600x400/EEE/31343C?text=Beanie"
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Beanie",
+    "category": "Accessories"
   },
   {
     "id": 6,
-    "name": "Backpack",
+    "name": "Everyday Backpack",
     "price": 60,
     "description": "A durable backpack for all your needs.",
-    "image": "https://placehold.co/600x400/EEE/31343C?text=Backpack"
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Backpack",
+    "category": "Accessories"
   },
   {
     "id": 7,
-    "name": "t-shirt",
-    "price": 10,
-    "description": "A durable t-shirt for all.",
-    "image": "https://placehold.co/600x400/EEE/31343C?text=Backpack"
+    "name": "Graphic Tee",
+    "price": 30,
+    "description": "A soft t-shirt with a unique graphic print.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Graphic+Tee",
+    "category": "Tops"
+  },
+  {
+    "id": 8,
+    "name": "Cargo Shorts",
+    "price": 45,
+    "description": "Comfortable and practical cargo shorts for sunny days.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Shorts",
+    "category": "Bottoms"
+  },
+  {
+    "id": 9,
+    "name": "Leather Boots",
+    "price": 150,
+    "description": "Durable and stylish leather boots for any occasion.",
+    "image": "https://placehold.co/600x400/EEE/31343C?text=Boots",
+    "category": "Footwear"
   }
 ]

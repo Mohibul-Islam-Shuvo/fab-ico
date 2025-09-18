@@ -1,7 +1,5 @@
 <div class="text-center">
-  <h1 class="text-2xl font-bold mb-4">Thank you for your order!</h1>
-  <p>Your order has been successfully placed. You will receive a confirmation email shortly.</p>
-  <a href="/" class="mt-6 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Continue Shopping
-  </a>
+  <h1 class="text-3xl font-bold text-green-500 mb-4">Thank You!</h1>
+  <p class="text-lg">Your order has been placed successfully.</p>
+  <a href="/" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 mt-8 inline-block">Continue Shopping</a>
 </div>

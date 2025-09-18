@@ -1,58 +1,45 @@
+
 <script lang="ts">
-  let productName = '';
-  let keywords = '';
-  let generatedDescription = '';
-  let loading = false;
+  import products from '$lib/data/products.json';
+  import ProductCard from '$lib/components/ProductCard.svelte';
 
-  const generateDescription = async () => {
-    loading = true;
-    // In a real scenario, you might call an external AI service.
-    // Here, we'll simulate an AI generating a description based on the input.
-    const prompt = `Generate a compelling e-commerce product description for a product named "${productName}" with the following keywords: ${keywords}.`;
-    
-    // Simulate AI response time
-    await new Promise(resolve => setTimeout(resolve, 1500));
+  let generatedOutfit: any[] | null = null;
 
-    // This is a simplified example of what the AI might generate.
-    generatedDescription = `Introducing the ${productName}, your new go-to for any occasion. Crafted with a focus on being ${keywords}, this piece is a must-have in every wardrobe. Its unique design and high-quality materials ensure both comfort and style. Perfect for dressing up or down, the ${productName} offers versatility and a timeless look. Don't miss out on this essential item!`;
-    
-    loading = false;
-  };
+  function generateOutfit() {
+    const tops = products.filter(p => p.category === 'Tops');
+    const bottoms = products.filter(p => p.category === 'Bottoms');
+    const footwear = products.filter(p => p.category === 'Footwear');
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(generatedDescription);
-    alert('Description copied to clipboard!');
-  };
+    if (tops.length && bottoms.length && footwear.length) {
+      const randomTop = tops[Math.floor(Math.random() * tops.length)];
+      const randomBottom = bottoms[Math.floor(Math.random() * bottoms.length)];
+      const randomFootwear = footwear[Math.floor(Math.random() * footwear.length)];
+      generatedOutfit = [randomTop, randomBottom, randomFootwear];
+    } else {
+      generatedOutfit = []; // Set to empty array if categories are missing
+    }
+  }
 </script>
 
-<h1 class="text-2xl font-bold mb-6">AI Description Generator</h1>
-
-<div class="max-w-xl">
-  <div class="mb-4">
-    <label for="productName" class="block text-gray-700 font-bold mb-2">Product Name</label>
-    <input type="text" id="productName" bind:value={productName} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., Women's Summer Dress">
-  </div>
-
-  <div class="mb-4">
-    <label for="keywords" class="block text-gray-700 font-bold mb-2">Keywords</label>
-    <input type="text" id="keywords" bind:value={keywords} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., lightweight, floral print, casual">
-  </div>
-
-  <button on:click={generateDescription} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" disabled={loading}>
-    {#if loading}
-      Generating...
-    {:else}
-      Generate Description
-    {/if}
+<div class="text-center">
+  <h1 class="text-3xl font-bold mb-2">AI Outfit Generator</h1>
+  <p class="text-gray-600 mb-6">Let our AI create the perfect outfit for you!</p>
+  <button on:click={generateOutfit} class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow-lg">
+    ✨ Generate My Outfit
   </button>
-
-  {#if generatedDescription}
-    <div class="mt-8">
-      <h2 class="text-xl font-bold mb-4">Generated Description</h2>
-      <textarea readonly class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-48">{generatedDescription}</textarea>
-      <button on:click={copyToClipboard} class="mt-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-        Copy to Clipboard
-      </button>
-    </div>
-  {/if}
 </div>
+
+{#if generatedOutfit}
+  {#if generatedOutfit.length > 0}
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-center mb-6">Your AI-Generated Outfit:</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {#each generatedOutfit as product (product.id)}
+          <ProductCard {product} />
+        {/each}
+      </div>
+    </div>
+  {:else}
+    <p class="text-center mt-8 text-red-500">Could not generate a full outfit. Please ensure there are products in 'Tops', 'Bottoms', and 'Footwear' categories.</p>
+  {/if}
+{/if}
