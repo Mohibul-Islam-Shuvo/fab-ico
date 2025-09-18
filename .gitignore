@@ -6,7 +6,10 @@ node_modules
 .netlify
 .wrangler
 /.svelte-kit
-/build
+/node_modules
+
+# svelte-adapter-static
+
 
 # OS
 .DS_Store
